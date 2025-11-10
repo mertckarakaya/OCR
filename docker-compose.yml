@@ -1,0 +1,12 @@
+services:
+  ocr:
+    build: .
+    image: my-ocr-batch
+    volumes:
+      - ./data:/data
+    environment:
+      OCR_LANG: "tur+eng"
+      OCR_DPI: "300"
+      OCR_PSM: "6"
+      OCR_FORCE: "0"
+    restart: "no"
